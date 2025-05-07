@@ -1,3 +1,3 @@
-await Promise.resolve()
+import { saveCamera } from './data.js'
 
-console.log('Hello, world')
+await saveCamera('Kelder', { timeout: 5 })
