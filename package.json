@@ -6,7 +6,9 @@
   "main": "server.js",
   "scripts": {
     "build": "esbuild src/index.ts --bundle --outdir=dist --format=esm --platform=node --packages=external",
-    "dev": "npm run build -- --watch"
+    "dev": "npm run build -- --watch",
+    "init": "cp -v scripts/hooks/* .git/hooks/",
+    "lint": "eslint src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,11 @@
   },
   "homepage": "https://github.com/relicode/rtmp-camera-save#readme",
   "devDependencies": {
-    "esbuild": "0.25.4"
+    "@eslint/js": "^9.26.0",
+    "esbuild": "0.25.4",
+    "eslint": "^9.26.0",
+    "globals": "^16.1.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.0"
   }
 }
