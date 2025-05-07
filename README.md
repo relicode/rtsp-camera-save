@@ -19,5 +19,6 @@ npm start                       # Within rtmp-camera-save dir
 
 ## Development
 ```sh
+npm run init # Optional, installs development helpers
 npm run dev
 ```
