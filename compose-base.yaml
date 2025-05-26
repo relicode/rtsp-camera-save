@@ -1,0 +1,17 @@
+services:
+  camera_base:
+    image: sirencodes/rtsp-saver:latest
+    build: .
+    user: '1001:100' # dockeruser:users
+    labels:
+      - 'name=MyCamera'
+    environment:
+      - TZ=Europe/Tallinn
+    restart: unless-stopped
+    healthcheck:
+      test: '/healthcheck.sh'
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+      start_interval: 5s
