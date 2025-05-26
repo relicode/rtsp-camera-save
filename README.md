@@ -1,6 +1,6 @@
 # rtsp-camera-save
 
-## Usage shell
+## CLI
 ```sh
 # Usage
 ./save-rtsp.sh <url> <output-dir>
@@ -10,6 +10,6 @@
 ```
 
 ## Docker compose
-1. Change values in `compose.yaml` accordingly. Make sure the `recordings` dir has appropriate permission related to the user
+1. Change values in `compose.yaml` and/or `compose-base.yaml` accordingly. Make sure the `recordings` dir has appropriate permission related to the user
 2. `COMPOSE_BAKE=true docker compose up # COMPOSE_BAKE=true is optional`
 
