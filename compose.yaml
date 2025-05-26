@@ -4,14 +4,14 @@ services:
     build: .
     user: '1001:100' # dockeruser:users
     labels:
-      - 'name=KameraTõkkepuu'
+      - 'name=MyCamera'
     environment:
       - TZ=Europe/Tallinn
     volumes:
       - ./recordings:/recordings
     restart: unless-stopped
     healthcheck:
-      test: ['/healthcheck.sh']
+      test: '/healthcheck.sh'
       interval: 10s
       timeout: 10s
       retries: 3
