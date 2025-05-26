@@ -10,6 +10,6 @@
 ```
 
 ## Docker compose
-1. Change values in `compose.yaml` accordingly
+1. Change values in `compose.yaml` accordingly. Make sure the `recordings` dir has appropriate permission related to the user
 2. `docker compose up`
 

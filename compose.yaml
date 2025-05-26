@@ -2,7 +2,7 @@ services:
   camera_a:
     image: sirencodes/rtsp-saver:latest
     build: .
-    user: '501'
+    user: '1001:100' # dockeruser:users
     labels:
       - 'name=KameraTõkkepuu'
     environment:
