@@ -11,5 +11,5 @@
 
 ## Docker compose
 1. Change values in `compose.yaml` accordingly. Make sure the `recordings` dir has appropriate permission related to the user
-2. `docker compose up`
+2. `COMPOSE_BAKE=true docker compose up # COMPOSE_BAKE=true is optional`
 

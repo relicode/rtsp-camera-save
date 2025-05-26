@@ -9,4 +9,11 @@ services:
       - TZ=Europe/Tallinn
     volumes:
       - ./recordings:/recordings
+    healthcheck:
+      test: ['/healthcheck.sh']
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+      start_interval: 5s
     command: 'rtsp://user:pass@192.168.10.81:554/live/ch0'
