@@ -1,23 +1,15 @@
-# rtmp-camera-save
-Saves RTSP feeds from IP cameras
+# rtsp-camera-save
 
-## Installation
+## Usage shell
 ```sh
-npm i
+# Usage
+./save-rtsp.sh <url> <output-dir>
+
+# Example
+./save-rtsp.sh rtsp://user:pass@192.168.10.89:554/live/ch0 /tmp/saved
 ```
 
-## Building and running
-```sh
-npm run build
-```
+## Docker compose
+1. Change values in `compose.yaml` accordingly. Make sure the `recordings` dir has appropriate permission related to the user
+2. `COMPOSE_BAKE=true docker compose up # COMPOSE_BAKE=true is optional`
 
-## Running
-```sh
-node <path/to/rtmp-camera-save> # Outside rtmp-camera-save dir
-npm start                       # Within rtmp-camera-save dir
-```
-
-## Development
-```sh
-npm run dev
-```
