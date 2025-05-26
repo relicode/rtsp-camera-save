@@ -1,0 +1,12 @@
+services:
+  camera_a:
+    image: sirencodes/rtsp-saver:latest
+    build: .
+    user: '501'
+    labels:
+      - 'name=KameraTõkkepuu'
+    environment:
+      - TZ=Europe/Tallinn
+    volumes:
+      - ./recordings:/recordings
+    command: 'rtsp://user:pass@192.168.10.81:554/live/ch0'
