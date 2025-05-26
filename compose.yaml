@@ -2,7 +2,7 @@ services:
   camera_a:
     extends:
       file: ./compose-base.yaml
-      service: camera_base
+      service: camera
     volumes:
       - ./recordings:/recordings
     command: 'rtsp://user:pass@192.168.11.101:554/live/ch0'
