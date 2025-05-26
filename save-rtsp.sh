@@ -25,4 +25,4 @@ ffmpeg \
   -segment_format mkv \
   -segment_atclocktime 1 \
   -strftime 1 \
-  "$OUTPUT_DIR/%Y%m%dT%H%M%S.mp4"
+  "$OUTPUT_DIR/%Y-%m-%d__%H-%M-%S__%s.mp4"
