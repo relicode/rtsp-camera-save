@@ -9,6 +9,7 @@ services:
       - TZ=Europe/Tallinn
     volumes:
       - ./recordings:/recordings
+    restart: unless-stopped
     healthcheck:
       test: ['/healthcheck.sh']
       interval: 10s
